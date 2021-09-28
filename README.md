@@ -1,0 +1,1 @@
+## Demonstrating BLE GATT server features of mbed OS 6 (6.9) using NRF52-DK and MPU6050.
