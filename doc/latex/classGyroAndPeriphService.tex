@@ -1,0 +1,70 @@
+\hypertarget{classGyroAndPeriphService}{}\doxysection{Gyro\+And\+Periph\+Service Class Reference}
+\label{classGyroAndPeriphService}\index{GyroAndPeriphService@{GyroAndPeriphService}}
+
+
+Gyroscope service demonstrating Gatt\+Server features of mbed OS 6.  
+
+
+
+
+{\ttfamily \#include $<$appserver.\+h$>$}
+
+
+
+Inheritance diagram for Gyro\+And\+Periph\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classGyroAndPeriphService__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gyro\+And\+Periph\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classGyroAndPeriphService__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGyroAndPeriphService_a99498ed53c97c39a8798d97729f74ae1}{start}} (BLE \&, events\+::\+Event\+Queue \&)
+\begin{DoxyCompactList}\small\item\em Start the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gyroscope service demonstrating Gatt\+Server features of mbed OS 6. 
+
+The service has 3 gyro-\/characteristics that contain the G-\/s values from \mbox{\hyperlink{classMPU6050}{MPU6050}}, gain via interrupt operation (MPU is pre-\/configured for this). A n\+RF Connect client can subscribe to updates of this characteristics and get notified when one of the value is changed. Clients can also change the value of the peripheral controled characteristic\+: set 0x01 to turn HIGH level of the appropriate output or 0x00 to set LOW pin level. The UUID of all characteristics was generated using python3 UUID module. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGyroAndPeriphService_a99498ed53c97c39a8798d97729f74ae1}\label{classGyroAndPeriphService_a99498ed53c97c39a8798d97729f74ae1}} 
+\index{GyroAndPeriphService@{GyroAndPeriphService}!start@{start}}
+\index{start@{start}!GyroAndPeriphService@{GyroAndPeriphService}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Gyro\+And\+Periph\+Service\+::start (\begin{DoxyParamCaption}\item[{BLE \&}]{ble,  }\item[{events\+::\+Event\+Queue \&}]{event\+\_\+queue }\end{DoxyParamCaption})}
+
+
+
+Start the application. 
+
+Initialize BLE peripheral of NRF52 and \mbox{\hyperlink{classMPU6050}{MPU6050}} device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ble} & Reference to BLE-\/capable radio transceivers or SOC \\
+\hline
+{\em event\+\_\+queue} & Reference to event queue\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/appserver.\+h\item 
+src/\mbox{\hyperlink{appserver_8cpp}{appserver.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{appserver_8cpp}{}\doxysection{src/appserver.cpp File Reference}
+\label{appserver_8cpp}\index{src/appserver.cpp@{src/appserver.cpp}}
+{\ttfamily \#include \char`\"{}appserver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mpu6050.\+h\char`\"{}}\newline
+Include dependency graph for appserver.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{appserver_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{appserver_8cpp_adaba09cfdcf46ed2e7d737a2c8cdf1e7}\label{appserver_8cpp_adaba09cfdcf46ed2e7d737a2c8cdf1e7}} 
+\#define {\bfseries ADV\+\_\+\+PERIOD}~5000ms
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{appserver_8cpp_af291f5d282f7f74e0232c3c4f6fbd62f}{Application\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em Application entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{appserver_8cpp_a7e41a2178d7943922a90e58da80ffa9d}\label{appserver_8cpp_a7e41a2178d7943922a90e58da80ffa9d}} 
+\mbox{\hyperlink{classMPU6050}{MPU6050}} {\bfseries mpu6050}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main service algo implementation. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{appserver_8cpp_af291f5d282f7f74e0232c3c4f6fbd62f}\label{appserver_8cpp_af291f5d282f7f74e0232c3c4f6fbd62f}} 
+\index{appserver.cpp@{appserver.cpp}!ApplicationStart@{ApplicationStart}}
+\index{ApplicationStart@{ApplicationStart}!appserver.cpp@{appserver.cpp}}
+\doxysubsubsection{\texorpdfstring{ApplicationStart()}{ApplicationStart()}}
+{\footnotesize\ttfamily void Application\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Application entry point. 
+
+Execution of the program starts here.
+
+First create the reference to the BLE singleton corresponding to a given interface, initialize event queue for dispatching events start our service.
+
+After that, make a process for handle basic BLE setup and advertising for clients.
+
+Once it\textquotesingle{}s done it will let continue with demo. 

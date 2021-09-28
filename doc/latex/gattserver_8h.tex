@@ -1,0 +1,50 @@
+\hypertarget{gattserver_8h}{}\doxysection{src/gattserver.h File Reference}
+\label{gattserver_8h}\index{src/gattserver.h@{src/gattserver.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$events/mbed\+\_\+events.\+h$>$}\newline
+{\ttfamily \#include $<$platform/\+Callback.\+h$>$}\newline
+{\ttfamily \#include $<$platform/\+Non\+Copyable.\+h$>$}\newline
+{\ttfamily \#include $<$Gap.\+h$>$}\newline
+{\ttfamily \#include $<$gap/\+Advertising\+Data\+Parser.\+h$>$}\newline
+{\ttfamily \#include $<$ble/common/\+Function\+Pointer\+With\+Context.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}syslogger.\+h\char`\"{}}\newline
+Include dependency graph for gattserver.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gattserver_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{gattserver_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBLEProcess}{BLEProcess}}
+\begin{DoxyCompactList}\small\item\em Inherit general handler of GAP-\/related events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGattServerProcess}{Gatt\+Server\+Process}}
+\begin{DoxyCompactList}\small\item\em Gatt Server Process for our service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gattserver_8h_a648bd933ac9d8b14baaf13cc05865eb4}\label{gattserver_8h_a648bd933ac9d8b14baaf13cc05865eb4}} 
+\#define {\bfseries \+\_\+\+\_\+\+GATT\+\_\+\+SERVER\+\_\+\+H\+\_\+\+\_\+}
+\item 
+\mbox{\Hypertarget{gattserver_8h_abcb3b88a2ffb4f61a9248acb1ef5a1f6}\label{gattserver_8h_abcb3b88a2ffb4f61a9248acb1ef5a1f6}} 
+\#define {\bfseries DEV\+\_\+\+NAME}~\char`\"{}Gyro \& Peripheral Server\char`\"{}
+\item 
+\mbox{\Hypertarget{gattserver_8h_ab12bc5838f8730e8cef291eafa5c2984}\label{gattserver_8h_ab12bc5838f8730e8cef291eafa5c2984}} 
+\#define {\bfseries MAX\+\_\+\+ADVERTISING\+\_\+\+PAYLOAD\+\_\+\+SIZE}~50
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Additional compilation unit service class implementing. 

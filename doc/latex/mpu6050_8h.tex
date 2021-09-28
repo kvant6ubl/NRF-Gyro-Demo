@@ -1,0 +1,475 @@
+\hypertarget{mpu6050_8h}{}\doxysection{src/mpu6050.h File Reference}
+\label{mpu6050_8h}\index{src/mpu6050.h@{src/mpu6050.h}}
+
+
+Additional compilation unit contains a lightweight library for \mbox{\hyperlink{classMPU6050}{MPU6050}}.  
+
+
+{\ttfamily \#include $<$mbed.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for mpu6050.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{mpu6050_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{mpu6050_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMPU6050}{MPU6050}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a03f96223cf9b34ed27bf34199b3f57fc}\label{mpu6050_8h_a03f96223cf9b34ed27bf34199b3f57fc}} 
+\#define {\bfseries \+\_\+\+\_\+\+MPU6050\+\_\+\+H\+\_\+\+\_\+}
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a0f102d53060f697468142dcc3d33775f}\label{mpu6050_8h_a0f102d53060f697468142dcc3d33775f}} 
+\#define {\bfseries XGOFFS\+\_\+\+TC}~0x00
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ac90f2f5d830307c0bbb230f5f5347f70}\label{mpu6050_8h_ac90f2f5d830307c0bbb230f5f5347f70}} 
+\#define {\bfseries YGOFFS\+\_\+\+TC}~0x01
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a645e89dbc915ad02c627910b797ed8b4}\label{mpu6050_8h_a645e89dbc915ad02c627910b797ed8b4}} 
+\#define {\bfseries ZGOFFS\+\_\+\+TC}~0x02
+\item 
+\mbox{\Hypertarget{mpu6050_8h_aca80739c2ec40ca15ba201d4537748ab}\label{mpu6050_8h_aca80739c2ec40ca15ba201d4537748ab}} 
+\#define {\bfseries X\+\_\+\+FINE\+\_\+\+GAIN}~0x03
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ab332d8fef934cfcd0ef9941ea6755f18}\label{mpu6050_8h_ab332d8fef934cfcd0ef9941ea6755f18}} 
+\#define {\bfseries Y\+\_\+\+FINE\+\_\+\+GAIN}~0x04
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a3a7ba0accd4030b06d353933b16f8996}\label{mpu6050_8h_a3a7ba0accd4030b06d353933b16f8996}} 
+\#define {\bfseries Z\+\_\+\+FINE\+\_\+\+GAIN}~0x05
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ae78e00d167f08af6530c8ee3bcaeb298}\label{mpu6050_8h_ae78e00d167f08af6530c8ee3bcaeb298}} 
+\#define {\bfseries XA\+\_\+\+OFFSET\+\_\+H}~0x06
+\item 
+\mbox{\Hypertarget{mpu6050_8h_aa791c10b75c16bc5597478b1a40d529f}\label{mpu6050_8h_aa791c10b75c16bc5597478b1a40d529f}} 
+\#define {\bfseries XA\+\_\+\+OFFSET\+\_\+\+L\+\_\+\+TC}~0x07
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a539098400cb39fa2ba99fb17b407e4f1}\label{mpu6050_8h_a539098400cb39fa2ba99fb17b407e4f1}} 
+\#define {\bfseries YA\+\_\+\+OFFSET\+\_\+H}~0x08
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a8cd8dfd54a40c1d83848866759237fbf}\label{mpu6050_8h_a8cd8dfd54a40c1d83848866759237fbf}} 
+\#define {\bfseries YA\+\_\+\+OFFSET\+\_\+\+L\+\_\+\+TC}~0x09
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a3beaaac6dcdf69ac6d4971944650c92e}\label{mpu6050_8h_a3beaaac6dcdf69ac6d4971944650c92e}} 
+\#define {\bfseries ZA\+\_\+\+OFFSET\+\_\+H}~0x0A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ad2c767fc7821a921a286b1442cc5ae9a}\label{mpu6050_8h_ad2c767fc7821a921a286b1442cc5ae9a}} 
+\#define {\bfseries ZA\+\_\+\+OFFSET\+\_\+\+L\+\_\+\+TC}~0x0B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a4c0d3e6b3314f9a5cc235c24a618cba4}\label{mpu6050_8h_a4c0d3e6b3314f9a5cc235c24a618cba4}} 
+\#define {\bfseries SELF\+\_\+\+TEST\+\_\+X}~0x0D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a92f4a4659b11235ca06d4227bd206a8a}\label{mpu6050_8h_a92f4a4659b11235ca06d4227bd206a8a}} 
+\#define {\bfseries SELF\+\_\+\+TEST\+\_\+Y}~0x0E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a1aa9f3a6932e568d6e0f0b677ccd0b2e}\label{mpu6050_8h_a1aa9f3a6932e568d6e0f0b677ccd0b2e}} 
+\#define {\bfseries SELF\+\_\+\+TEST\+\_\+Z}~0x0F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_aecf8bbb67ca8ce8346d5cee8510b530f}\label{mpu6050_8h_aecf8bbb67ca8ce8346d5cee8510b530f}} 
+\#define {\bfseries SELF\+\_\+\+TEST\+\_\+A}~0x10
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a75ed9711e6453cadb7bc62a8457aefc7}\label{mpu6050_8h_a75ed9711e6453cadb7bc62a8457aefc7}} 
+\#define {\bfseries XG\+\_\+\+OFFS\+\_\+\+USRH}~0x13
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a49299ef6d11d7ba69751f58abad33a54}\label{mpu6050_8h_a49299ef6d11d7ba69751f58abad33a54}} 
+\#define {\bfseries XG\+\_\+\+OFFS\+\_\+\+USRL}~0x14
+\item 
+\mbox{\Hypertarget{mpu6050_8h_af77b200540e2780a76af9d446e722ee7}\label{mpu6050_8h_af77b200540e2780a76af9d446e722ee7}} 
+\#define {\bfseries YG\+\_\+\+OFFS\+\_\+\+USRH}~0x15
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a79bd3286cf36d15c6cea51d08a6a622c}\label{mpu6050_8h_a79bd3286cf36d15c6cea51d08a6a622c}} 
+\#define {\bfseries YG\+\_\+\+OFFS\+\_\+\+USRL}~0x16
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a272087902ac250d729833f566dc0e7a7}\label{mpu6050_8h_a272087902ac250d729833f566dc0e7a7}} 
+\#define {\bfseries ZG\+\_\+\+OFFS\+\_\+\+USRH}~0x17
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a21bfc74e9d45847e56fda9243cd4a1a1}\label{mpu6050_8h_a21bfc74e9d45847e56fda9243cd4a1a1}} 
+\#define {\bfseries ZG\+\_\+\+OFFS\+\_\+\+USRL}~0x18
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a7119c37e38b6736096ea1565459043ba}\label{mpu6050_8h_a7119c37e38b6736096ea1565459043ba}} 
+\#define {\bfseries SMPLRT\+\_\+\+DIV}~0x19
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a76ea3cf49247a07c54b3db005a3c7f57}\label{mpu6050_8h_a76ea3cf49247a07c54b3db005a3c7f57}} 
+\#define {\bfseries CONFIG}~0x1A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ac57e8c3192c859321b447c07089f20f0}\label{mpu6050_8h_ac57e8c3192c859321b447c07089f20f0}} 
+\#define {\bfseries GYRO\+\_\+\+CONFIG}~0x1B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ab7336e26f8947086e41a375f1e1e74d4}\label{mpu6050_8h_ab7336e26f8947086e41a375f1e1e74d4}} 
+\#define {\bfseries ACCEL\+\_\+\+CONFIG}~0x1C
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a410ac6e861b3d12482203f2ad4bf9803}\label{mpu6050_8h_a410ac6e861b3d12482203f2ad4bf9803}} 
+\#define {\bfseries FF\+\_\+\+THR}~0x1D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a1bac52f5ea986695908e11953da65daa}\label{mpu6050_8h_a1bac52f5ea986695908e11953da65daa}} 
+\#define {\bfseries FF\+\_\+\+DUR}~0x1E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a7f58ac7631efe13fd4cafa8d22088746}\label{mpu6050_8h_a7f58ac7631efe13fd4cafa8d22088746}} 
+\#define {\bfseries MOT\+\_\+\+THR}~0x1F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_abd323d6704238106a255f3123fed1bcc}\label{mpu6050_8h_abd323d6704238106a255f3123fed1bcc}} 
+\#define {\bfseries MOT\+\_\+\+DUR}~0x20
+\item 
+\mbox{\Hypertarget{mpu6050_8h_acba14d5cc97ac5d30f48a3a14f203d01}\label{mpu6050_8h_acba14d5cc97ac5d30f48a3a14f203d01}} 
+\#define {\bfseries ZMOT\+\_\+\+THR}~0x21
+\item 
+\mbox{\Hypertarget{mpu6050_8h_aea8c245e80349e063d172a10a40cf6a3}\label{mpu6050_8h_aea8c245e80349e063d172a10a40cf6a3}} 
+\#define {\bfseries ZRMOT\+\_\+\+DUR}~0x22
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a53954ec7f9dc790f00548da08ccd5ed6}\label{mpu6050_8h_a53954ec7f9dc790f00548da08ccd5ed6}} 
+\#define {\bfseries FIFO\+\_\+\+EN}~0x23
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a24bc05247067ad9f0479f5a6d49c6412}\label{mpu6050_8h_a24bc05247067ad9f0479f5a6d49c6412}} 
+\#define {\bfseries I2\+C\+\_\+\+MST\+\_\+\+CTRL}~0x24
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a614db921c27f375c632960a7f34999a4}\label{mpu6050_8h_a614db921c27f375c632960a7f34999a4}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV0\+\_\+\+ADDR}~0x25
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a0553d56ecccd0fc8008505e712a9b075}\label{mpu6050_8h_a0553d56ecccd0fc8008505e712a9b075}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV0\+\_\+\+REG}~0x26
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ad6fb6553534b0b9e9715db3e5a04ebca}\label{mpu6050_8h_ad6fb6553534b0b9e9715db3e5a04ebca}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV0\+\_\+\+CTRL}~0x27
+\item 
+\mbox{\Hypertarget{mpu6050_8h_adeef906221a363d4489cf0a51d7f03b6}\label{mpu6050_8h_adeef906221a363d4489cf0a51d7f03b6}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV1\+\_\+\+ADDR}~0x28
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a33d12ea757eeb8ef10aa501f6c68ba3d}\label{mpu6050_8h_a33d12ea757eeb8ef10aa501f6c68ba3d}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV1\+\_\+\+REG}~0x29
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a6857f4e255988b5aae9d570dec2a06c8}\label{mpu6050_8h_a6857f4e255988b5aae9d570dec2a06c8}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV1\+\_\+\+CTRL}~0x2A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a034ba244ecc0c426be3f4633aeb7a9ff}\label{mpu6050_8h_a034ba244ecc0c426be3f4633aeb7a9ff}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV2\+\_\+\+ADDR}~0x2B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a1dcc66c14a2f15c66d14e194ea580aca}\label{mpu6050_8h_a1dcc66c14a2f15c66d14e194ea580aca}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV2\+\_\+\+REG}~0x2C
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a0e361efa54525005024d5311522c4fd0}\label{mpu6050_8h_a0e361efa54525005024d5311522c4fd0}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV2\+\_\+\+CTRL}~0x2D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a88324f0308864c807e4e20908dcbc8dd}\label{mpu6050_8h_a88324f0308864c807e4e20908dcbc8dd}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV3\+\_\+\+ADDR}~0x2E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a3e60bba66fa653f2051858107209bc44}\label{mpu6050_8h_a3e60bba66fa653f2051858107209bc44}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV3\+\_\+\+REG}~0x2F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ab01644e46212208586b93974f4ff1c76}\label{mpu6050_8h_ab01644e46212208586b93974f4ff1c76}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV3\+\_\+\+CTRL}~0x30
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a25432a6492073ae1e1e082ea95ad3c65}\label{mpu6050_8h_a25432a6492073ae1e1e082ea95ad3c65}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV4\+\_\+\+ADDR}~0x31
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a89919db5e2f4a361c1d19cc2215c8d0c}\label{mpu6050_8h_a89919db5e2f4a361c1d19cc2215c8d0c}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV4\+\_\+\+REG}~0x32
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a317a21f85deb696c508437cd32ac803c}\label{mpu6050_8h_a317a21f85deb696c508437cd32ac803c}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV4\+\_\+\+DO}~0x33
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a7e5cb081a1546553fe74fb3e07b7907b}\label{mpu6050_8h_a7e5cb081a1546553fe74fb3e07b7907b}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV4\+\_\+\+CTRL}~0x34
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a838003994d9f3319308f9f650cc2a083}\label{mpu6050_8h_a838003994d9f3319308f9f650cc2a083}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV4\+\_\+\+DI}~0x35
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a8498e646190e00d95ddd95af4d6a093a}\label{mpu6050_8h_a8498e646190e00d95ddd95af4d6a093a}} 
+\#define {\bfseries I2\+C\+\_\+\+MST\+\_\+\+STATUS}~0x36
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ab00fdfba66092d2d869031629c092dad}\label{mpu6050_8h_ab00fdfba66092d2d869031629c092dad}} 
+\#define {\bfseries INT\+\_\+\+PIN\+\_\+\+CFG}~0x37
+\item 
+\mbox{\Hypertarget{mpu6050_8h_abf7a56466fd6203663685a04448c9185}\label{mpu6050_8h_abf7a56466fd6203663685a04448c9185}} 
+\#define {\bfseries INT\+\_\+\+ENABLE}~0x38
+\item 
+\mbox{\Hypertarget{mpu6050_8h_acd8ea6999f06652db1f2f0191535030d}\label{mpu6050_8h_acd8ea6999f06652db1f2f0191535030d}} 
+\#define {\bfseries DMP\+\_\+\+INT\+\_\+\+STATUS}~0x39
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a62cba161837810295654c3cc2de959a6}\label{mpu6050_8h_a62cba161837810295654c3cc2de959a6}} 
+\#define {\bfseries INT\+\_\+\+STATUS}~0x3A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a94b93aa4aabbe7caec7884ddb46b531b}\label{mpu6050_8h_a94b93aa4aabbe7caec7884ddb46b531b}} 
+\#define {\bfseries ACCEL\+\_\+\+XOUT\+\_\+H}~0x3B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a47679c25e1689ee0401959e33e05a761}\label{mpu6050_8h_a47679c25e1689ee0401959e33e05a761}} 
+\#define {\bfseries ACCEL\+\_\+\+XOUT\+\_\+L}~0x3C
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a26d680f52fbdaa0623d16292e9c40d4c}\label{mpu6050_8h_a26d680f52fbdaa0623d16292e9c40d4c}} 
+\#define {\bfseries ACCEL\+\_\+\+YOUT\+\_\+H}~0x3D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ad7a92304bd1dd3755068380b51319a93}\label{mpu6050_8h_ad7a92304bd1dd3755068380b51319a93}} 
+\#define {\bfseries ACCEL\+\_\+\+YOUT\+\_\+L}~0x3E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a44d84761605d984a0de060640f4c57da}\label{mpu6050_8h_a44d84761605d984a0de060640f4c57da}} 
+\#define {\bfseries ACCEL\+\_\+\+ZOUT\+\_\+H}~0x3F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a36e02bfb24518b6c425d9c3411c8d720}\label{mpu6050_8h_a36e02bfb24518b6c425d9c3411c8d720}} 
+\#define {\bfseries ACCEL\+\_\+\+ZOUT\+\_\+L}~0x40
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ae8c4c28fe604535a3a57d0536c6e8175}\label{mpu6050_8h_ae8c4c28fe604535a3a57d0536c6e8175}} 
+\#define {\bfseries TEMP\+\_\+\+OUT\+\_\+H}~0x41
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a7fe4a13198c0b3d8cf09802e7247fd2c}\label{mpu6050_8h_a7fe4a13198c0b3d8cf09802e7247fd2c}} 
+\#define {\bfseries TEMP\+\_\+\+OUT\+\_\+L}~0x42
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a0016198ccf5ca2b7f41d7a23e6554373}\label{mpu6050_8h_a0016198ccf5ca2b7f41d7a23e6554373}} 
+\#define {\bfseries GYRO\+\_\+\+XOUT\+\_\+H}~0x43
+\item 
+\mbox{\Hypertarget{mpu6050_8h_af07374691962c7531539cfcd36aa1c4b}\label{mpu6050_8h_af07374691962c7531539cfcd36aa1c4b}} 
+\#define {\bfseries GYRO\+\_\+\+XOUT\+\_\+L}~0x44
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a0970193c5ba295a66f057c017663adf1}\label{mpu6050_8h_a0970193c5ba295a66f057c017663adf1}} 
+\#define {\bfseries GYRO\+\_\+\+YOUT\+\_\+H}~0x45
+\item 
+\mbox{\Hypertarget{mpu6050_8h_af2403ccc9042c6a869278a7c211a396d}\label{mpu6050_8h_af2403ccc9042c6a869278a7c211a396d}} 
+\#define {\bfseries GYRO\+\_\+\+YOUT\+\_\+L}~0x46
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ac0fcd61ece1f100c02494fc94f0b0dad}\label{mpu6050_8h_ac0fcd61ece1f100c02494fc94f0b0dad}} 
+\#define {\bfseries GYRO\+\_\+\+ZOUT\+\_\+H}~0x47
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a5466aa6a32d0b17e834ef9792e7f415d}\label{mpu6050_8h_a5466aa6a32d0b17e834ef9792e7f415d}} 
+\#define {\bfseries GYRO\+\_\+\+ZOUT\+\_\+L}~0x48
+\item 
+\mbox{\Hypertarget{mpu6050_8h_aa6580b929fcb8b3e29fe45b73180d2bd}\label{mpu6050_8h_aa6580b929fcb8b3e29fe45b73180d2bd}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+00}~0x49
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a8ed38366c5fd97bc79b23134681b8fd1}\label{mpu6050_8h_a8ed38366c5fd97bc79b23134681b8fd1}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+01}~0x4A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a822c1a91ee9b0cca390feb6db63eba3a}\label{mpu6050_8h_a822c1a91ee9b0cca390feb6db63eba3a}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+02}~0x4B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a8c3c5180b969688f1eec48548932b289}\label{mpu6050_8h_a8c3c5180b969688f1eec48548932b289}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+03}~0x4C
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a53327789cbaa9524f605bf1a949a3721}\label{mpu6050_8h_a53327789cbaa9524f605bf1a949a3721}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+04}~0x4D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a1f0717df6956a91622ae56a3b9f4f4cc}\label{mpu6050_8h_a1f0717df6956a91622ae56a3b9f4f4cc}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+05}~0x4E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_aab6bf6aeb2b5886db1699422f0a8c6f1}\label{mpu6050_8h_aab6bf6aeb2b5886db1699422f0a8c6f1}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+06}~0x4F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a8e73ed6d6770184bbd214eb77155d1d7}\label{mpu6050_8h_a8e73ed6d6770184bbd214eb77155d1d7}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+07}~0x50
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a06d79475ed490e22a8f4a1f5070885b3}\label{mpu6050_8h_a06d79475ed490e22a8f4a1f5070885b3}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+08}~0x51
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a95423c012618954425a5e05e51344518}\label{mpu6050_8h_a95423c012618954425a5e05e51344518}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+09}~0x52
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a17ffc13805aeb2d547cf265ad71d889a}\label{mpu6050_8h_a17ffc13805aeb2d547cf265ad71d889a}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+10}~0x53
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a57c507a8b29a7aae504d11237623bcff}\label{mpu6050_8h_a57c507a8b29a7aae504d11237623bcff}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+11}~0x54
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ad03614904530a23e6e929aceffacb02f}\label{mpu6050_8h_ad03614904530a23e6e929aceffacb02f}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+12}~0x55
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a84a195e746187955b919cfb369c9b3f2}\label{mpu6050_8h_a84a195e746187955b919cfb369c9b3f2}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+13}~0x56
+\item 
+\mbox{\Hypertarget{mpu6050_8h_afdcda6b14a5b2817fa6a2f8ae02dcf75}\label{mpu6050_8h_afdcda6b14a5b2817fa6a2f8ae02dcf75}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+14}~0x57
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a92bddf06089f0ba3cc5eaf1b4f06de75}\label{mpu6050_8h_a92bddf06089f0ba3cc5eaf1b4f06de75}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+15}~0x58
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a52c290d0bedd60da40dc7642cc6316d8}\label{mpu6050_8h_a52c290d0bedd60da40dc7642cc6316d8}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+16}~0x59
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a63801c75a1f1edd00b2b3c8e34449bad}\label{mpu6050_8h_a63801c75a1f1edd00b2b3c8e34449bad}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+17}~0x5A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a6904d8e04ea5402bd45789fca09e5cc6}\label{mpu6050_8h_a6904d8e04ea5402bd45789fca09e5cc6}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+18}~0x5B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a11cdfa5c6ed8d4d086f262a816559d1d}\label{mpu6050_8h_a11cdfa5c6ed8d4d086f262a816559d1d}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+19}~0x5C
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a454439327f1392387a1cd561b5be3513}\label{mpu6050_8h_a454439327f1392387a1cd561b5be3513}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+20}~0x5D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ab2e693acdbd957d5176b62af82660b6f}\label{mpu6050_8h_ab2e693acdbd957d5176b62af82660b6f}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+21}~0x5E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a7849441883409c9298dde2d8d630379f}\label{mpu6050_8h_a7849441883409c9298dde2d8d630379f}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+22}~0x5F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a8df8803a9a6ed3b78c539114168672cf}\label{mpu6050_8h_a8df8803a9a6ed3b78c539114168672cf}} 
+\#define {\bfseries EXT\+\_\+\+SENS\+\_\+\+DATA\+\_\+23}~0x60
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a44039b29ab338cfce4caa0a90239c6b3}\label{mpu6050_8h_a44039b29ab338cfce4caa0a90239c6b3}} 
+\#define {\bfseries MOT\+\_\+\+DETECT\+\_\+\+STATUS}~0x61
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a2f0f1237e987597a4405b9deeefeb6f5}\label{mpu6050_8h_a2f0f1237e987597a4405b9deeefeb6f5}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV0\+\_\+\+DO}~0x63
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a043904c7afcc6c5f59446654b0e5c14d}\label{mpu6050_8h_a043904c7afcc6c5f59446654b0e5c14d}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV1\+\_\+\+DO}~0x64
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ae935eee6b3a91c715fe9efb59cfa150d}\label{mpu6050_8h_ae935eee6b3a91c715fe9efb59cfa150d}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV2\+\_\+\+DO}~0x65
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a56d7f8f0bbced62e74ed56f08443932c}\label{mpu6050_8h_a56d7f8f0bbced62e74ed56f08443932c}} 
+\#define {\bfseries I2\+C\+\_\+\+SLV3\+\_\+\+DO}~0x66
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a070e664a4ae9c8f4f78f8a6e8e15b9b3}\label{mpu6050_8h_a070e664a4ae9c8f4f78f8a6e8e15b9b3}} 
+\#define {\bfseries I2\+C\+\_\+\+MST\+\_\+\+DELAY\+\_\+\+CTRL}~0x67
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a5cae7ff09ba8025d553ef7c3775df43b}\label{mpu6050_8h_a5cae7ff09ba8025d553ef7c3775df43b}} 
+\#define {\bfseries SIGNAL\+\_\+\+PATH\+\_\+\+RESET}~0x68
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ac7ad68f7d63876052fd1535c0167de29}\label{mpu6050_8h_ac7ad68f7d63876052fd1535c0167de29}} 
+\#define {\bfseries MOT\+\_\+\+DETECT\+\_\+\+CTRL}~0x69
+\item 
+\mbox{\Hypertarget{mpu6050_8h_abd9eebb35aad7616fe0414952e2d477d}\label{mpu6050_8h_abd9eebb35aad7616fe0414952e2d477d}} 
+\#define {\bfseries USER\+\_\+\+CTRL}~0x6A
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a96169eb207e721c1546cea9ffd8a35e4}\label{mpu6050_8h_a96169eb207e721c1546cea9ffd8a35e4}} 
+\#define {\bfseries PWR\+\_\+\+MGMT\+\_\+1}~0x6B
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a23cfbcfd19dc88eb631309970f138e65}\label{mpu6050_8h_a23cfbcfd19dc88eb631309970f138e65}} 
+\#define {\bfseries PWR\+\_\+\+MGMT\+\_\+2}~0x6C
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a9f38a9aeb464154e86ca7c61e89406e6}\label{mpu6050_8h_a9f38a9aeb464154e86ca7c61e89406e6}} 
+\#define {\bfseries DMP\+\_\+\+BANK}~0x6D
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a9600b0c262af1c277fec0066d1d7fce2}\label{mpu6050_8h_a9600b0c262af1c277fec0066d1d7fce2}} 
+\#define {\bfseries DMP\+\_\+\+RW\+\_\+\+PNT}~0x6E
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a7eebf8b85709c0907f52dadbe26edf1b}\label{mpu6050_8h_a7eebf8b85709c0907f52dadbe26edf1b}} 
+\#define {\bfseries DMP\+\_\+\+REG}~0x6F
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a9fd80eb99ab7993f053bb1eff23fc8d1}\label{mpu6050_8h_a9fd80eb99ab7993f053bb1eff23fc8d1}} 
+\#define {\bfseries DMP\+\_\+\+REG\+\_\+1}~0x70
+\item 
+\mbox{\Hypertarget{mpu6050_8h_abe3e3a80ab15fc4f12c88b4117e3d747}\label{mpu6050_8h_abe3e3a80ab15fc4f12c88b4117e3d747}} 
+\#define {\bfseries DMP\+\_\+\+REG\+\_\+2}~0x71
+\item 
+\mbox{\Hypertarget{mpu6050_8h_adbbef0e95665e066deb615f04b347491}\label{mpu6050_8h_adbbef0e95665e066deb615f04b347491}} 
+\#define {\bfseries FIFO\+\_\+\+COUNTH}~0x72
+\item 
+\mbox{\Hypertarget{mpu6050_8h_adbede65b2cfa35abde780bd704077f53}\label{mpu6050_8h_adbede65b2cfa35abde780bd704077f53}} 
+\#define {\bfseries FIFO\+\_\+\+COUNTL}~0x73
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ac12b6d897ba3ad98caeb3bd070c1c158}\label{mpu6050_8h_ac12b6d897ba3ad98caeb3bd070c1c158}} 
+\#define {\bfseries FIFO\+\_\+\+R\+\_\+W}~0x74
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a39dd5be380647ef470a0940057791c5e}\label{mpu6050_8h_a39dd5be380647ef470a0940057791c5e}} 
+\#define {\bfseries WHO\+\_\+\+AM\+\_\+\+I\+\_\+\+MPU6050}~0x75
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a0ca358b8171fd08fd631434ee8ff2339}\label{mpu6050_8h_a0ca358b8171fd08fd631434ee8ff2339}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+INT\+\_\+\+LEVEL\+\_\+\+BIT}~7
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ae8cef0becbc209ac15fea3d86261d324}\label{mpu6050_8h_ae8cef0becbc209ac15fea3d86261d324}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+INT\+\_\+\+OPEN\+\_\+\+BIT}~6
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a5704a7815c0fa6dcbfd4666a70e89d90}\label{mpu6050_8h_a5704a7815c0fa6dcbfd4666a70e89d90}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+LATCH\+\_\+\+INT\+\_\+\+EN\+\_\+\+BIT}~5
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a45b83ab5dc3f439636f6e5c591f1d5b1}\label{mpu6050_8h_a45b83ab5dc3f439636f6e5c591f1d5b1}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+INT\+\_\+\+RD\+\_\+\+CLEAR\+\_\+\+BIT}~4
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a1696357738f5b7e4bc50ec4170be3324}\label{mpu6050_8h_a1696357738f5b7e4bc50ec4170be3324}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+FSYNC\+\_\+\+INT\+\_\+\+LEVEL\+\_\+\+BIT}~3
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a39963ea6d8b9cbeebc4daf40f8872fed}\label{mpu6050_8h_a39963ea6d8b9cbeebc4daf40f8872fed}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+FSYNC\+\_\+\+INT\+\_\+\+EN\+\_\+\+BIT}~2
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ab3dd639412ccf5b69cfb66346d0b6b99}\label{mpu6050_8h_ab3dd639412ccf5b69cfb66346d0b6b99}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+I2\+C\+\_\+\+BYPASS\+\_\+\+EN\+\_\+\+BIT}~1
+\item 
+\mbox{\Hypertarget{mpu6050_8h_af6f983ee1d32777d725f259c7806f15a}\label{mpu6050_8h_af6f983ee1d32777d725f259c7806f15a}} 
+\#define {\bfseries MPU6050\+\_\+\+INTCFG\+\_\+\+CLKOUT\+\_\+\+EN\+\_\+\+BIT}~0
+\item 
+\mbox{\Hypertarget{mpu6050_8h_abe717edc8354f136def5fbbc67f90709}\label{mpu6050_8h_abe717edc8354f136def5fbbc67f90709}} 
+\#define {\bfseries ADO}~0
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a6a26d06d2f863deedd849612a6c2a4e4}\label{mpu6050_8h_a6a26d06d2f863deedd849612a6c2a4e4}} 
+\#define {\bfseries MPU6050\+\_\+\+ADDRESS}~0x68 $<$$<$ 1 /$\ast$ Device address when ADO = 0 $\ast$/
+\item 
+\mbox{\Hypertarget{mpu6050_8h_ad5d16198867b94d239a2c44eaade08cb}\label{mpu6050_8h_ad5d16198867b94d239a2c44eaade08cb}} 
+\#define {\bfseries MPU\+\_\+\+I2\+C\+\_\+\+SDA}~P0\+\_\+26
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a81eb28ce55c6a985f57116d24f0bcbfc}\label{mpu6050_8h_a81eb28ce55c6a985f57116d24f0bcbfc}} 
+\#define {\bfseries MPU\+\_\+\+I2\+C\+\_\+\+SCL}~P0\+\_\+27
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a809d38a83bb0293b913cb890cafd82a8}\label{mpu6050_8h_a809d38a83bb0293b913cb890cafd82a8}} 
+enum {\bfseries Ascale} \{ {\bfseries AFS\+\_\+2G} = 0
+, {\bfseries AFS\+\_\+4G}
+, {\bfseries AFS\+\_\+8G}
+, {\bfseries AFS\+\_\+16G}
+ \}
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a56b5f26fc75e706b7513b8bac0006980}\label{mpu6050_8h_a56b5f26fc75e706b7513b8bac0006980}} 
+enum {\bfseries Gscale} \{ {\bfseries GFS\+\_\+250\+DPS} = 0
+, {\bfseries GFS\+\_\+500\+DPS}
+, {\bfseries GFS\+\_\+1000\+DPS}
+, {\bfseries GFS\+\_\+2000\+DPS}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mpu6050_8h_a694b4590e80aa83d294b722b5902fb88}\label{mpu6050_8h_a694b4590e80aa83d294b722b5902fb88}} 
+I2C {\bfseries i2c} (MPU\+\_\+\+I2\+C\+\_\+\+SDA, MPU\+\_\+\+I2\+C\+\_\+\+SCL)
+\item 
+long \mbox{\hyperlink{mpu6050_8h_a37998c0193af36b17d82e8811c3a8c21}{from\+ADCto\+Int}} (long value, long from\+\_\+min, long from\+\_\+max, long to\+\_\+min, long to\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Mapping two values, based on ranges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Additional compilation unit contains a lightweight library for \mbox{\hyperlink{classMPU6050}{MPU6050}}. 
+
+Header consist of register\textquotesingle{}s defines for \mbox{\hyperlink{classMPU6050}{MPU6050}}, implementing in MPU-\/6000 and MPU-\/6050 Register Map and Descriptions Revision 4.\+2\+:
+
+\href{https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf}{\texttt{ https\+://invensense.\+tdk.\+com/wp-\/content/uploads/2015/02/\+MPU-\/6000-\/\+Register-\/\+Map1.\+pdf}} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mpu6050_8h_a37998c0193af36b17d82e8811c3a8c21}\label{mpu6050_8h_a37998c0193af36b17d82e8811c3a8c21}} 
+\index{mpu6050.h@{mpu6050.h}!fromADCtoInt@{fromADCtoInt}}
+\index{fromADCtoInt@{fromADCtoInt}!mpu6050.h@{mpu6050.h}}
+\doxysubsubsection{\texorpdfstring{fromADCtoInt()}{fromADCtoInt()}}
+{\footnotesize\ttfamily long from\+ADCto\+Int (\begin{DoxyParamCaption}\item[{long}]{value,  }\item[{long}]{from\+\_\+min,  }\item[{long}]{from\+\_\+max,  }\item[{long}]{to\+\_\+min,  }\item[{long}]{to\+\_\+max }\end{DoxyParamCaption})}
+
+
+
+Mapping two values, based on ranges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Integer number, out variable \\
+\hline
+{\em from\+\_\+min} & Minimal bound of value \\
+\hline
+{\em from\+\_\+max} & Maximum bound of value \\
+\hline
+{\em to\+\_\+min} & Minimal bound of new value \\
+\hline
+{\em to\+\_\+max} & Minimal bound of new value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long output value 
+\end{DoxyReturn}

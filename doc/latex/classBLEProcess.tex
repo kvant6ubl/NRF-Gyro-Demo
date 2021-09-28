@@ -1,0 +1,291 @@
+\hypertarget{classBLEProcess}{}\doxysection{BLEProcess Class Reference}
+\label{classBLEProcess}\index{BLEProcess@{BLEProcess}}
+
+
+Inherit general handler of GAP-\/related events.  
+
+
+
+
+{\ttfamily \#include $<$gattserver.\+h$>$}
+
+
+
+Inheritance diagram for BLEProcess\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBLEProcess__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for BLEProcess\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBLEProcess__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a873642e0a367dadd5824eb7ba68a68c4}\label{classBLEProcess_a873642e0a367dadd5824eb7ba68a68c4}} 
+\mbox{\hyperlink{classBLEProcess_a873642e0a367dadd5824eb7ba68a68c4}{BLEProcess}} (events\+::\+Event\+Queue \&event\+\_\+queue, BLE \&ble\+\_\+interface)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classBLEProcess}{BLEProcess}} from an event queue and a ble interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_ab764787f8da27e19690c012ef8f20d2d}{start}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the ble interface, configure it and start advertising. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_a36d39e419f3629cfa4d27e604e2e09a0}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Close existing connections and stop the process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_a9ffa671357486def5f6327937570360a}{on\+Init}} (mbed\+::\+Callback$<$ void(BLE \&, events\+::\+Event\+Queue \&)$>$ cb)
+\begin{DoxyCompactList}\small\item\em Subscription to the BLE interface initialization event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_abced5eac43b8200e890715d91770c078}{on\+\_\+connect}} (mbed\+::\+Callback$<$ void(BLE \&, events\+::\+Event\+Queue \&, const ble\+::\+Connection\+Complete\+Event \&event)$>$ cb)
+\begin{DoxyCompactList}\small\item\em Set callback for a succesful connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBLEProcess_a51caaf4cb5c2fe6e3e8dae4946628795}\label{classBLEProcess_a51caaf4cb5c2fe6e3e8dae4946628795}} 
+virtual const char $\ast$ {\bfseries get\+\_\+device\+\_\+name} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBLEProcess_a2bba574bccf73463b2471130d0cedb50}{on\+Init\+Complete}} (BLE\+::\+Initialization\+Complete\+Callback\+Context $\ast$event)
+\begin{DoxyCompactList}\small\item\em Sets up adverting payload and start advertising. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_afb46261be6eecd0bced54de467bad2a5}{on\+Connection\+Complete}} (const ble\+::\+Connection\+Complete\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Start the gatt client process when a connection event is received. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_ab6f56368e24ee0f7e9632504a69043c3}{on\+Disconnection\+Complete}} (const ble\+::\+Disconnection\+Complete\+Event \&event) override
+\begin{DoxyCompactList}\small\item\em Stop the gatt client process when the device is disconnected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_adbf2d8c4bd3e5ff4b042cee7b6668435}{on\+Advertising\+End}} (const ble\+::\+Advertising\+End\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Restarts main activity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBLEProcess_a576d2ffba6cedf406f2512e57f5cd1df}{start\+\_\+activity}} ()
+\begin{DoxyCompactList}\small\item\em Start advertising/scanning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_a1e3134b41b1391b1bf6bf17007229b66}{start\+\_\+advertising}} ()
+\begin{DoxyCompactList}\small\item\em Start the advertising process, ends when a device connects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBLEProcess_ad6cc6646fcb055c09d810e48670dd557}{schedule\+\_\+ble\+\_\+events}} (BLE\+::\+On\+Events\+To\+Process\+Callback\+Context $\ast$event)
+\begin{DoxyCompactList}\small\item\em Schedule processing of events from the BLE middleware in the event queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a76f3aa7124044f4de5c166c9be04ee91}\label{classBLEProcess_a76f3aa7124044f4de5c166c9be04ee91}} 
+events\+::\+Event\+Queue \& {\bfseries \+\_\+event\+\_\+queue}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a89e5d99fdb4801c554fb282e3bc7a311}\label{classBLEProcess_a89e5d99fdb4801c554fb282e3bc7a311}} 
+BLE \& {\bfseries \+\_\+ble}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a13f3ed96d3d90be31ee1bd665ecebbaa}\label{classBLEProcess_a13f3ed96d3d90be31ee1bd665ecebbaa}} 
+ble\+::\+Gap \& {\bfseries \+\_\+gap}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a578dbdfaf2ea4ba9db9eaaf229c91681}\label{classBLEProcess_a578dbdfaf2ea4ba9db9eaaf229c91681}} 
+uint8\+\_\+t {\bfseries \+\_\+adv\+\_\+buffer} \mbox{[}MAX\+\_\+\+ADVERTISING\+\_\+\+PAYLOAD\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a89a7f3e14fbc7afa99c83e64bd628753}\label{classBLEProcess_a89a7f3e14fbc7afa99c83e64bd628753}} 
+ble\+::\+Advertising\+Data\+Builder {\bfseries \+\_\+adv\+\_\+data\+\_\+builder}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a1d933a48e577ea6d932a7ff07ceccaf9}\label{classBLEProcess_a1d933a48e577ea6d932a7ff07ceccaf9}} 
+ble\+::advertising\+\_\+handle\+\_\+t {\bfseries \+\_\+adv\+\_\+handle} = ble\+::\+LEGACY\+\_\+\+ADVERTISING\+\_\+\+HANDLE
+\item 
+\mbox{\Hypertarget{classBLEProcess_adf6f25e0565c36624d83128257e852fe}\label{classBLEProcess_adf6f25e0565c36624d83128257e852fe}} 
+mbed\+::\+Callback$<$ void(BLE \&, events\+::\+Event\+Queue \&)$>$ {\bfseries \+\_\+post\+\_\+init\+\_\+cb}
+\item 
+\mbox{\Hypertarget{classBLEProcess_a1ab1d3081c7edec4001f2aac6da5a4bb}\label{classBLEProcess_a1ab1d3081c7edec4001f2aac6da5a4bb}} 
+mbed\+::\+Callback$<$ void(BLE \&, events\+::\+Event\+Queue \&, const ble\+::\+Connection\+Complete\+Event \&event)$>$ {\bfseries \+\_\+post\+\_\+connect\+\_\+cb}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inherit general handler of GAP-\/related events. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBLEProcess_abced5eac43b8200e890715d91770c078}\label{classBLEProcess_abced5eac43b8200e890715d91770c078}} 
+\index{BLEProcess@{BLEProcess}!on\_connect@{on\_connect}}
+\index{on\_connect@{on\_connect}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{on\_connect()}{on\_connect()}}
+{\footnotesize\ttfamily void BLEProcess\+::on\+\_\+connect (\begin{DoxyParamCaption}\item[{mbed\+::\+Callback$<$ void(BLE \&, events\+::\+Event\+Queue \&, const ble\+::\+Connection\+Complete\+Event \&event)$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set callback for a succesful connection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & The callback object that will be called when we connect to a peer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_adbf2d8c4bd3e5ff4b042cee7b6668435}\label{classBLEProcess_adbf2d8c4bd3e5ff4b042cee7b6668435}} 
+\index{BLEProcess@{BLEProcess}!onAdvertisingEnd@{onAdvertisingEnd}}
+\index{onAdvertisingEnd@{onAdvertisingEnd}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{onAdvertisingEnd()}{onAdvertisingEnd()}}
+{\footnotesize\ttfamily void BLEProcess\+::on\+Advertising\+End (\begin{DoxyParamCaption}\item[{const ble\+::\+Advertising\+End\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Restarts main activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Advertising end complete event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_afb46261be6eecd0bced54de467bad2a5}\label{classBLEProcess_afb46261be6eecd0bced54de467bad2a5}} 
+\index{BLEProcess@{BLEProcess}!onConnectionComplete@{onConnectionComplete}}
+\index{onConnectionComplete@{onConnectionComplete}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{onConnectionComplete()}{onConnectionComplete()}}
+{\footnotesize\ttfamily void BLEProcess\+::on\+Connection\+Complete (\begin{DoxyParamCaption}\item[{const ble\+::\+Connection\+Complete\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Start the gatt client process when a connection event is received. 
+
+This is called by Gap to notify the application we connected
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Connection complete event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_ab6f56368e24ee0f7e9632504a69043c3}\label{classBLEProcess_ab6f56368e24ee0f7e9632504a69043c3}} 
+\index{BLEProcess@{BLEProcess}!onDisconnectionComplete@{onDisconnectionComplete}}
+\index{onDisconnectionComplete@{onDisconnectionComplete}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{onDisconnectionComplete()}{onDisconnectionComplete()}}
+{\footnotesize\ttfamily void BLEProcess\+::on\+Disconnection\+Complete (\begin{DoxyParamCaption}\item[{const ble\+::\+Disconnection\+Complete\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Stop the gatt client process when the device is disconnected. 
+
+This is called by Gap to notify the application we disconnected
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Disconnection complete event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_a9ffa671357486def5f6327937570360a}\label{classBLEProcess_a9ffa671357486def5f6327937570360a}} 
+\index{BLEProcess@{BLEProcess}!onInit@{onInit}}
+\index{onInit@{onInit}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{onInit()}{onInit()}}
+{\footnotesize\ttfamily void BLEProcess\+::on\+Init (\begin{DoxyParamCaption}\item[{mbed\+::\+Callback$<$ void(BLE \&, events\+::\+Event\+Queue \&)$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subscription to the BLE interface initialization event. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cb} & The callback object that will be called when the ble interface is initialized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_a2bba574bccf73463b2471130d0cedb50}\label{classBLEProcess_a2bba574bccf73463b2471130d0cedb50}} 
+\index{BLEProcess@{BLEProcess}!onInitComplete@{onInitComplete}}
+\index{onInitComplete@{onInitComplete}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{onInitComplete()}{onInitComplete()}}
+{\footnotesize\ttfamily void BLEProcess\+::on\+Init\+Complete (\begin{DoxyParamCaption}\item[{BLE\+::\+Initialization\+Complete\+Callback\+Context $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets up adverting payload and start advertising. 
+
+This function is invoked when the BLE interface is initialized
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Initialization complete event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_ad6cc6646fcb055c09d810e48670dd557}\label{classBLEProcess_ad6cc6646fcb055c09d810e48670dd557}} 
+\index{BLEProcess@{BLEProcess}!schedule\_ble\_events@{schedule\_ble\_events}}
+\index{schedule\_ble\_events@{schedule\_ble\_events}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{schedule\_ble\_events()}{schedule\_ble\_events()}}
+{\footnotesize\ttfamily void BLEProcess\+::schedule\+\_\+ble\+\_\+events (\begin{DoxyParamCaption}\item[{BLE\+::\+On\+Events\+To\+Process\+Callback\+Context $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Schedule processing of events from the BLE middleware in the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Reference of events to process event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_ab764787f8da27e19690c012ef8f20d2d}\label{classBLEProcess_ab764787f8da27e19690c012ef8f20d2d}} 
+\index{BLEProcess@{BLEProcess}!start@{start}}
+\index{start@{start}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void BLEProcess\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the ble interface, configure it and start advertising. 
+
+Function handle GAP events, and inform us off all events so we can schedule their handling using event queue.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_a576d2ffba6cedf406f2512e57f5cd1df}\label{classBLEProcess_a576d2ffba6cedf406f2512e57f5cd1df}} 
+\index{BLEProcess@{BLEProcess}!start\_activity@{start\_activity}}
+\index{start\_activity@{start\_activity}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{start\_activity()}{start\_activity()}}
+{\footnotesize\ttfamily virtual void BLEProcess\+::start\+\_\+activity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Start advertising/scanning. 
+
+Triggered by init or disconnection
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_a1e3134b41b1391b1bf6bf17007229b66}\label{classBLEProcess_a1e3134b41b1391b1bf6bf17007229b66}} 
+\index{BLEProcess@{BLEProcess}!start\_advertising@{start\_advertising}}
+\index{start\_advertising@{start\_advertising}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{start\_advertising()}{start\_advertising()}}
+{\footnotesize\ttfamily void BLEProcess\+::start\+\_\+advertising (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Start the advertising process, ends when a device connects. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBLEProcess_a36d39e419f3629cfa4d27e604e2e09a0}\label{classBLEProcess_a36d39e419f3629cfa4d27e604e2e09a0}} 
+\index{BLEProcess@{BLEProcess}!stop@{stop}}
+\index{stop@{stop}!BLEProcess@{BLEProcess}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void BLEProcess\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Close existing connections and stop the process. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{gattserver_8h}{gattserver.\+h}}\end{DoxyCompactItemize}

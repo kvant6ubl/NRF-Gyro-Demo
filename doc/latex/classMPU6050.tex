@@ -1,0 +1,202 @@
+\hypertarget{classMPU6050}{}\doxysection{MPU6050 Class Reference}
+\label{classMPU6050}\index{MPU6050@{MPU6050}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMPU6050_a614a360a9abd1857b4dfa072410fc59e}\label{classMPU6050_a614a360a9abd1857b4dfa072410fc59e}} 
+void {\bfseries write\+Byte} (uint8\+\_\+t address, uint8\+\_\+t sub\+Address, uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{classMPU6050_a82e038b7a841fd9de88dd0ea124de9e8}\label{classMPU6050_a82e038b7a841fd9de88dd0ea124de9e8}} 
+char {\bfseries read\+Byte} (uint8\+\_\+t address, uint8\+\_\+t sub\+Address)
+\item 
+\mbox{\Hypertarget{classMPU6050_a5edadf1b037dee45c6670553fc68ddc8}\label{classMPU6050_a5edadf1b037dee45c6670553fc68ddc8}} 
+void {\bfseries read\+Bytes} (uint8\+\_\+t address, uint8\+\_\+t sub\+Address, uint8\+\_\+t count, uint8\+\_\+t $\ast$dest)
+\item 
+void \mbox{\hyperlink{classMPU6050_a6c1feece6ebce637f1dfc62b4e51b505}{get\+Gres}} ()
+\begin{DoxyCompactList}\small\item\em Possible gyro scales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_ad4c9e5da02513d6da3226e61717f45d8}{get\+Ares}} ()
+\begin{DoxyCompactList}\small\item\em Possible accelerometer scales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_aeba6e510256e9ce45d60ad5f2e9730ea}{read\+Accel\+Data}} (int16\+\_\+t $\ast$destination)
+\begin{DoxyCompactList}\small\item\em Read x/y/z accel data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a85697978821b9750a663ad0da2665149}{read\+Gyro\+Data}} (int16\+\_\+t $\ast$destination)
+\begin{DoxyCompactList}\small\item\em Read x/y/z gyro data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classMPU6050_a25e6783c8ced9bddbf7a76ad6c0d862b}{get\+Tiny\+GyroX}} (void)
+\begin{DoxyCompactList}\small\item\em Gettin gyro-\/X value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classMPU6050_a0f2fa52481baa9149ae3de0f4f1ccd55}{get\+Tiny\+GyroY}} (void)
+\begin{DoxyCompactList}\small\item\em Gettin gyro-\/Y value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classMPU6050_af9abab30196b2e4aa39aaa19d361cef4}{get\+Tiny\+GyroZ}} (void)
+\begin{DoxyCompactList}\small\item\em Gettin gyro-\/Z value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a144c5eeb14c620d9df9bb601dabcdfe4}{low\+Power\+Accel\+Only}} ()
+\begin{DoxyCompactList}\small\item\em Configure the motion detection control for low power accelerometer mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a7100b6d276c3c8664cf00d768b7b0dee}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset MPU device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_ac13cbf2fc086558a1aaab5ad0ac350e5}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize MPU device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMPU6050_a9e714480274e46034d7178f31401095e}{calibrate}} (float $\ast$dest1, float $\ast$dest2)
+\begin{DoxyCompactList}\small\item\em Calibrate device before adress advertising. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMPU6050_a9e714480274e46034d7178f31401095e}\label{classMPU6050_a9e714480274e46034d7178f31401095e}} 
+\index{MPU6050@{MPU6050}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily void MPU6050\+::calibrate (\begin{DoxyParamCaption}\item[{float $\ast$}]{dest1,  }\item[{float $\ast$}]{dest2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calibrate device before adress advertising. 
+
+Function which accumulates gyro and accelerometer data after device initialization. It calculates the average of the at-\/rest readings and then loads the resulting offsets into accelerometer and gyro bias registers. Reset device, reset all registers, clear gyro and accelerometer bias registers.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_ad4c9e5da02513d6da3226e61717f45d8}\label{classMPU6050_ad4c9e5da02513d6da3226e61717f45d8}} 
+\index{MPU6050@{MPU6050}!getAres@{getAres}}
+\index{getAres@{getAres}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getAres()}{getAres()}}
+{\footnotesize\ttfamily void MPU6050\+::get\+Ares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Possible accelerometer scales. 
+
+Their register bit settings) are\+: 2 Gs (00), 4 Gs (01), 8 Gs (10), and 16 Gs (11). Here\textquotesingle{}s a bit of an algorith to calculate DPS/(ADC tick) based on that 2-\/bit value. \mbox{\Hypertarget{classMPU6050_a6c1feece6ebce637f1dfc62b4e51b505}\label{classMPU6050_a6c1feece6ebce637f1dfc62b4e51b505}} 
+\index{MPU6050@{MPU6050}!getGres@{getGres}}
+\index{getGres@{getGres}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getGres()}{getGres()}}
+{\footnotesize\ttfamily void MPU6050\+::get\+Gres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Possible gyro scales. 
+
+Their register bit settings are\+: 250 DPS (00), 500 DPS (01), 1000 DPS (10), and 2000 DPS (11). Here\textquotesingle{}s a bit of an algorith to calculate DPS/(ADC tick) based on that 2-\/bit value. \mbox{\Hypertarget{classMPU6050_a25e6783c8ced9bddbf7a76ad6c0d862b}\label{classMPU6050_a25e6783c8ced9bddbf7a76ad6c0d862b}} 
+\index{MPU6050@{MPU6050}!getTinyGyroX@{getTinyGyroX}}
+\index{getTinyGyroX@{getTinyGyroX}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getTinyGyroX()}{getTinyGyroX()}}
+{\footnotesize\ttfamily uint8\+\_\+t MPU6050\+::get\+Tiny\+GyroX (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gettin gyro-\/X value. 
+
+Calculate and convert to uint8\+\_\+t small range gyro X value.
+
+\begin{DoxyReturn}{Returns}
+$<$uint8\+\_\+t$>$ converted value. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_a0f2fa52481baa9149ae3de0f4f1ccd55}\label{classMPU6050_a0f2fa52481baa9149ae3de0f4f1ccd55}} 
+\index{MPU6050@{MPU6050}!getTinyGyroY@{getTinyGyroY}}
+\index{getTinyGyroY@{getTinyGyroY}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getTinyGyroY()}{getTinyGyroY()}}
+{\footnotesize\ttfamily uint8\+\_\+t MPU6050\+::get\+Tiny\+GyroY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gettin gyro-\/Y value. 
+
+Calculate and convert to uint8\+\_\+t small range gyro Y value.
+
+\begin{DoxyReturn}{Returns}
+$<$uint8\+\_\+t$>$ converted value. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_af9abab30196b2e4aa39aaa19d361cef4}\label{classMPU6050_af9abab30196b2e4aa39aaa19d361cef4}} 
+\index{MPU6050@{MPU6050}!getTinyGyroZ@{getTinyGyroZ}}
+\index{getTinyGyroZ@{getTinyGyroZ}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{getTinyGyroZ()}{getTinyGyroZ()}}
+{\footnotesize\ttfamily uint8\+\_\+t MPU6050\+::get\+Tiny\+GyroZ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gettin gyro-\/Z value. 
+
+Calculate and convert to uint8\+\_\+t small range gyro Z value.
+
+\begin{DoxyReturn}{Returns}
+$<$uint8\+\_\+t$>$ converted value. ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_ac13cbf2fc086558a1aaab5ad0ac350e5}\label{classMPU6050_ac13cbf2fc086558a1aaab5ad0ac350e5}} 
+\index{MPU6050@{MPU6050}!init@{init}}
+\index{init@{init}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void MPU6050\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize MPU device. 
+
+Disable FSYNC and set accelerometer and gyro bandwidth to 44 and 42 Hz, respectively; DLPF\+\_\+\+CFG = bits 2\+:0 = 010; this sets the sample rate at 1 k\+Hz for both. Maximum delay is 4.\+9 ms which is just over a 200 Hz maximum rate.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_a144c5eeb14c620d9df9bb601dabcdfe4}\label{classMPU6050_a144c5eeb14c620d9df9bb601dabcdfe4}} 
+\index{MPU6050@{MPU6050}!lowPowerAccelOnly@{lowPowerAccelOnly}}
+\index{lowPowerAccelOnly@{lowPowerAccelOnly}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{lowPowerAccelOnly()}{lowPowerAccelOnly()}}
+{\footnotesize\ttfamily void MPU6050\+::low\+Power\+Accel\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configure the motion detection control for low power accelerometer mode. 
+
+The sensor has a high-\/pass filter necessary to invoke to allow the sensor motion detection algorithms work properly Motion detection occurs on free-\/fall (acceleration below a threshold for some time for all axes), motion (acceleration above a threshold for some time on at least one axis), and zero-\/motion toggle (acceleration on each axis less than a threshold for some time sets this flag, motion above the threshold turns it off). The high-\/pass filter takes gravity out consideration for these threshold evaluations.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_aeba6e510256e9ce45d60ad5f2e9730ea}\label{classMPU6050_aeba6e510256e9ce45d60ad5f2e9730ea}} 
+\index{MPU6050@{MPU6050}!readAccelData@{readAccelData}}
+\index{readAccelData@{readAccelData}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{readAccelData()}{readAccelData()}}
+{\footnotesize\ttfamily void MPU6050\+::read\+Accel\+Data (\begin{DoxyParamCaption}\item[{int16\+\_\+t $\ast$}]{destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read x/y/z accel data. 
+
+The x/y/z accel register data stored in $<$raw\+Data$>$. Read the six raw data registers into data array. It turn the MSB and LSB into a signed 16-\/bit value.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_a85697978821b9750a663ad0da2665149}\label{classMPU6050_a85697978821b9750a663ad0da2665149}} 
+\index{MPU6050@{MPU6050}!readGyroData@{readGyroData}}
+\index{readGyroData@{readGyroData}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{readGyroData()}{readGyroData()}}
+{\footnotesize\ttfamily void MPU6050\+::read\+Gyro\+Data (\begin{DoxyParamCaption}\item[{int16\+\_\+t $\ast$}]{destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read x/y/z gyro data. 
+
+The x/y/z gyro register data stored here $<$raw\+Data$>$. Read the six raw data registers sequentially into data array. It turn the MSB and LSB into a signed 16-\/bit value.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMPU6050_a7100b6d276c3c8664cf00d768b7b0dee}\label{classMPU6050_a7100b6d276c3c8664cf00d768b7b0dee}} 
+\index{MPU6050@{MPU6050}!reset@{reset}}
+\index{reset@{reset}!MPU6050@{MPU6050}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void MPU6050\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset MPU device. 
+
+Write a one to bit 7 reset bit and toggle reset device
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{mpu6050_8h}{mpu6050.\+h}}\end{DoxyCompactItemize}
