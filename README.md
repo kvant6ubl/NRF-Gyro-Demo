@@ -6,16 +6,19 @@ Current stage of this project includes ``MPU6050`` header (lightweight version o
 ### Hardware
 Device consist of ``NRF52-DK`` development board and ``MPU6050`` connected to it. 
 
-[NRF52-DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk), is (in this project) a board with nRF52832 flash-based ANT/ANT+, Bluetooth Low Energy SoC solution:
+[NRF52-DK](https://www.nordicsemi.com/Products/Development-hardware/nrf52-dk), is a board with nRF52832 (for the current project) flash-based ANT/ANT+, Bluetooth Low Energy SoC solution:
 
 <p align="center">
     <img src="https://infocenter.nordicsemi.com/topic/ug_nrf52832_dk/UG/nrf52_DK/images/nrf52_dk_kit_content.png"
-        height="400">
+        height="300">
 </p>
 
+``MPU6050`` is 6-axis motion-tracking device that combines a 3-axis gyroscope, 3-axis accelerometer, and a Digital Motion Processor (more about it here):
 
-``MPU6050`` is 6-axis motion-tracking device that combines a 3-axis
-gyroscope, 3-axis accelerometer, and a Digital Motion Processor (more about it here).
+<p align="center">
+    <img src="https://3d-diy.ru/upload/resize_cache/webp/upload/medialibrary/46c/mpu-6050-01.webp"
+        height="200">
+</p>
 
 
 ### Logic of the work
