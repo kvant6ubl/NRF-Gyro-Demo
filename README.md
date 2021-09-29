@@ -10,7 +10,7 @@ Device consist of ``NRF52-DK`` development board and ``MPU6050`` connected to it
 
 <p align="center">
     <img src="https://infocenter.nordicsemi.com/topic/ug_nrf52832_dk/UG/nrf52_DK/images/nrf52_dk_kit_content.png"
-        height="500">
+        height="400">
 </p>
 
 
