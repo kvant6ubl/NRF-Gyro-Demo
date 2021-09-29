@@ -10,7 +10,7 @@ number_of_uuid = int(args.uuidN)
 
 for uu in range(0, number_of_uuid):
     temp_usr_uuid = uuid.uuid3(uuid.NAMESPACE_DNS, str(random.randint(-1000 , 1000)))
-    print("Take your " + str(uu) + " UUID: " + str(temp_usr_uuid))
+    print("Take your " + str(uu+1) + " UUID: " + str(temp_usr_uuid))
 
 """
     UUID Class Instance examples:

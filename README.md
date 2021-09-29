@@ -30,7 +30,7 @@ When SoC is started-up, the device make GAP advertising every 5 seconds. User co
 ### GATT Service
 The GATT service has 3 gyro-characteristics that contain the small ``uint8_t`` gyroscopes values from ``MPU6050``, gain via external interrupt operation (MPU is pre-configured for this). All characteristics have read-only acces. The UUID of all characteristics was generated using python3 UUID module (file uniconverter.py):
 ```
-$ python3 uniconverter.py -n 3
+$ python3 uniconverter.py --uuidN 3
 Take your 1 UUID: 90cb4365-2833-4541-a321-9437d9b38464
 Take your 2 UUID: df49a77c-4fd8-4327-aa5f-1410bce0d0ff
 Take your 3 UUID: a511aa3f-744e-4790-a225-8553838aa6ac
