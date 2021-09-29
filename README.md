@@ -53,3 +53,9 @@ $ sudo dpkg -i JLink_Linux_x86_64.deb
 ```
 $ wget https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py -O get-platformio.py python3 get-platformio.py
 ```
+
+
+### Demonstrating
+
+When board started-up, it gives some service information and initialize BLE peripheral. After this - it create custom GATT Service - ``Gyro & Peripheral Server``. Once new client is connected the device is opening g-characheristics to read:  
+![alt text](https://github.com/kvant666ubl/NRF-Gyro-Demo/blob/master/demo.png?raw=true)
