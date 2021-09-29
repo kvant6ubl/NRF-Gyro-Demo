@@ -1,7 +1,9 @@
 ## Demonstrating BLE GATT server features of mbed OS 6 (6.9) using NRF52-DK and MPU6050 sensor.
 
+
 ### Release
-Current stage of this project includes ``MPU6050`` header (lightweight version of MPU6050IMU lib), GATT service and log-tool header.
+Current stage of this project includes ``MPU6050`` header (lightweight version of MPU6050IMU lib), ``GATT`` service and ``log-tool`` header.
+
 
 ### Hardware
 Device consist of ``NRF52-DK`` development board and ``MPU6050`` connected to it. 
@@ -13,7 +15,7 @@ Device consist of ``NRF52-DK`` development board and ``MPU6050`` connected to it
         height="300">
 </p>
 
-``MPU6050`` is 6-axis motion-tracking device that combines a 3-axis gyroscope, 3-axis accelerometer, and a Digital Motion Processor (more about it here):
+[MPU6050](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf) is 6-axis motion-tracking device that combines a 3-axis gyroscope, 3-axis accelerometer, and a Digital Motion Processor:
 
 <p align="center">
     <img src="https://3d-diy.ru/upload/resize_cache/webp/upload/medialibrary/46c/mpu-6050-01.webp"
